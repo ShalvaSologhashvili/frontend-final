@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bistro Bliss - Recipes</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/recipes.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./img/logo.png" alt="Bistro Bliss Logo">
+            <span class="logo-text-header">Bistro Bliss</span>
+        </div>
+        <div class="nav-buttons">
+            <a href="./index.html">Home</a>
+            <a href="./recipes.html">Recipes</a>
+            <a href="./registration.html">Registration</a>
+        </div>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <img src="./img/burger-icon.png" alt="Menu">
+        </div>
+    </header>
+
+    <div class="mobile-nav" id="mobileNav">
+        <a href="./index.html">Home</a>
+        <a href="./recipes.html">Recipes</a>
+        <a href="./registration.html">Registration</a>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <main>
+        <div class="drink-container" id="api"></div>
+        <button id="scrollToTop" class="scroll-to-top">↑</button>
+    </main>
+
+    <script src="./js/fetch.js"></script>
+    <script>
+        function toggleMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const overlay = document.getElementById('overlay');
+            
+            mobileNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
